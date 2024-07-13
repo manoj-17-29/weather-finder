@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import WeatherDetails from './WeatherDetails';
 
-const api = process.env.api_key;
 
 
 function App() {
 
+const api = import.meta.env.VITE_api_key;
 
 
 //const [icon,setIcon] = useState(profile);
@@ -30,7 +30,9 @@ const search = async () => {
   try {
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data);
+    // console.log(data);
+        console.log(api);
+
 
     if (data.cod === "404") {
       console.log("city not found");
