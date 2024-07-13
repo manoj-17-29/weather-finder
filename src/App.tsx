@@ -75,12 +75,12 @@ return (
   <>
     <div className="prd-bg">
       <div className=" py-6 block">
-        <h1 className="text-blue-700 text-4xl font-bold text-center ">
+        <h1 className="text-blue-700 text-2xl lg:text-4xl font-bold text-center ">
           Weather Finder
         </h1>
       </div>
       <div className="flex container  text-center py-2 justify-center ">
-        <div className="input-container bg-blue-50 w-full md:w-8/12 lg:w-5/12 p-5 pt-12 mx-5 rounded-2xl">
+        <div className="input-container bg-blue-100 w-full md:w-8/12 lg:w-5/12 p-2 md:p-5 py-10 mx-5 mt-2 rounded-2xl">
           <div className="bg-white rounded-lg py-2 w-full  px-2 ps-3 flex items-center border-2 ">
             <input
               type="text"

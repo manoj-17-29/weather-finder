@@ -45,7 +45,7 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
         </div>
       </div>
 
-      <div className="flex justify-between py-4 text-lg font-medium mx-12">
+      <div className="flex justify-between py-4 text-lg font-medium mx-4 md:mx-10">
         <div className="flex flex-col justify-between">
           <IoWater className="text-blue-500 mx-auto my-2" fontSize={40} />
           <span>{humidity} %</span>
