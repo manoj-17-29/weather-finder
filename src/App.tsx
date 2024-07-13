@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import WeatherDetails from './WeatherDetails';
 
+const api = process.env.api_key;
+
 
 function App() {
 
 
-let api_key = "32c82b10c6b85c559bd836422212dc3c";
 
 //const [icon,setIcon] = useState(profile);
 const [temp, setTemp] = useState("0");
@@ -24,7 +25,7 @@ const [loading, setLoading] = useState(false);
 const search = async () => {
   setLoading(true);
 
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${api_key}&units=Metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${api}&units=Metric`;
 
   try {
     let res = await fetch(url);
