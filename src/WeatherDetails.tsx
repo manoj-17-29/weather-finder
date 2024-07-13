@@ -35,12 +35,12 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
 
       <div className="coord flex justify-center py-4 text-lg font-medium">
         <div className="flex flex-col px-2">
-          <span>Latitude</span>
+          <span className="font-bold">Latitude</span>
           <span>{lat}</span>
         </div>
 
         <div className="flex flex-col px-2">
-          <span>Longitude</span>
+          <span className="font-bold">Longitude</span>
           <span>{lon}</span>
         </div>
       </div>
@@ -49,13 +49,13 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
         <div className="flex flex-col justify-between">
           <IoWater className="text-blue-500 mx-auto my-2" fontSize={40} />
           <span>{humidity} %</span>
-          <span>Humidity</span>
+          <span className="font-bold">Humidity</span>
         </div>
 
         <div className="flex flex-col justify-between">
           <WiCloudyWindy className="text-blue-500 mx-auto my-2" fontSize={50} />
           <span>{wind} Km/hr</span>
-          <span>Windspeed</span>
+          <span className="font-bold">Windspeed</span>
         </div>
       </div>
     </div>
