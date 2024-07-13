@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import WeatherDetails from './WeatherDetails';
+import { FaSearch } from "react-icons/fa";
 
 
 
@@ -73,30 +74,30 @@ function handlekeydown(e : any) {
 return (
   <>
     <div className="prd-bg">
-      <div className=" py-10 block">
+      <div className=" py-6 block">
         <h1 className="text-blue-700 text-4xl font-bold text-center ">
-          Weather
+          Weather Finder
         </h1>
       </div>
-      <div className="flex container  text-center py-8 justify-center ">
-        <div className="input-container bg-blue-50 w-full md:w-8/12 lg:w-4/12 p-5 pt-12 mx-5 rounded-2xl">
-          <div className="bg-white rounded-lg py-2 w-11/12 md:w-10/12 lg:w-9/12 px-4 flex mx-auto items-center border-2 ">
+      <div className="flex container  text-center py-2 justify-center ">
+        <div className="input-container bg-blue-50 w-full md:w-8/12 lg:w-5/12 p-5 pt-12 mx-5 rounded-2xl">
+          <div className="bg-white rounded-lg py-2 w-full  px-2 ps-3 flex items-center border-2 ">
             <input
               type="text"
               className="border-none outline-none w-full text-blue-600"
               onChange={handlecity}
               value={text}
               onKeyDown={handlekeydown}
-              placeholder="Enter a city"
+              placeholder="Enter a city name"
             />
-            <i
-              className="fa-solid fa-magnifying-glass text-blue-700 "
-              onClick={() => search()}
-            ></i>
+            <div className="bg-slate-200 px-2 py-1 rounded-lg flex justify-center items-center gap-2">
+              <FaSearch onClick={() => search()} />
+              <button onClick={() => search()}>search</button>
+            </div>
           </div>
 
           {loading && (
-            <p className="py-10 font-medium text-lg">please wait ... </p>
+            <p className="py-10 font-medium text-lg">Fetching Data ... </p>
           )}
 
           {cityNotFound && !loading && (

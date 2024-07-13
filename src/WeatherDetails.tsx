@@ -1,3 +1,7 @@
+import { IoWater } from "react-icons/io5";
+import { WiCloudyWindy } from "react-icons/wi";
+
+
 interface WeatherDetailsProps {
   temp: any;
   city: any;
@@ -19,7 +23,11 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
 }) => {
   return (
     <div className="py-10">
-      <img src="/weather.jpg" alt="" className="w-4/12 mx-auto rounded-xl" />
+      <img
+        src="/weather.jpg"
+        alt=""
+        className="w-6/12 md:w-4/12 mx-auto rounded-xl"
+      />
 
       <div className="pt-10 text-2xl font-bold">{temp} °C</div>
       <div className="pt-4 text-green-600 font-bold text-4xl">{city}</div>
@@ -38,14 +46,14 @@ const WeatherDetails: React.FC<WeatherDetailsProps> = ({
       </div>
 
       <div className="flex justify-between py-4 text-lg font-medium mx-12">
-        <div className="flex flex-col">
-          <i className="fa-solid fa-water text-4xl py-4 text-blue-500"></i>
+        <div className="flex flex-col justify-between">
+          <IoWater className="text-blue-500 mx-auto my-2" fontSize={40} />
           <span>{humidity} %</span>
           <span>Humidity</span>
         </div>
 
-        <div className="flex flex-col">
-          <i className="fa-solid fa-wind text-4xl py-5 text-blue-500"></i>
+        <div className="flex flex-col justify-between">
+          <WiCloudyWindy className="text-blue-500 mx-auto my-2" fontSize={50} />
           <span>{wind} Km/hr</span>
           <span>Windspeed</span>
         </div>
