@@ -1,9 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 body{
-    font-family: "Montserrat" !important;
+    font-family: "Saira" !important;
+}
+
+#style-7::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+#style-7::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+#style-7::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.44, rgb(22, 69, 210)),
+            color-stop(0.72, rgb(48, 115, 197)),
+            color-stop(0.86, rgb(22, 69, 210)));
 }
